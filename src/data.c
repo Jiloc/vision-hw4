@@ -70,7 +70,8 @@ data load_classification_data(char *images, char *label_file, int bias)
         if(bias) X.data[count][cols] = 1;
 
         for (i = 0; i < k; ++i){
-            if(strstr(path, labels[i])){
+            // if(strstr(path, labels[i]) != NULL){            
+            if(path[strlen(path) - 5] == labels[i][3]){
                 y.data[count][i] = 1;
             }
         }

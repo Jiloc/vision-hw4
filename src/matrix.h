@@ -27,8 +27,10 @@ void print_matrix(matrix m);
 double **n_principal_components(matrix m, int n);
 void test_matrix();
 matrix solve_system(matrix M, matrix b);
-matrix matrix_invert(matrix m);
 matrix random_matrix(int rows, int cols, double s);
 matrix transpose_matrix(matrix m);
 matrix axpy_matrix(double a, matrix x, matrix y);
+matrix matrix_sub_matrix(matrix a, matrix b);
+matrix matrix_invert(matrix m);
+void scale_matrix(matrix m, double s);
 #endif
